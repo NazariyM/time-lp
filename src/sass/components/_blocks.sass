@@ -1,0 +1,310 @@
+.btn
+   position: relative
+   display: inline-block
+   padding: 16px 47px
+   +f('pn700', 18, 28)
+   text-align: center
+   overflow: hidden
+   background-color: $color9
+   color: $color1
+   border-radius: 30px
+   outline: 0
+   cursor: pointer
+   transition: .3s ease-in-out
+   z-index: 1
+   +xs
+      padding: 11px 30px
+   &::before
+      position: absolute
+      left: 0
+      top: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      background: linear-gradient(110deg, hsla(0, 0%, 100%, 0) 15%, hsla(0, 0%, 100%, .75) 25%, hsla(0, 0%, 100%, 0) 35%)
+      animation: btnBlink 2.5s linear infinite
+      content: ''
+   &:hover
+      background-color: #ffba00
+   &_sm
+      min-width: 180px
+      padding: 16px 20px
+   &_gray
+      padding: 5px 10px
+      background-color: $color6
+      font-size: 16px
+      color: $color2
+      &:hover
+         background-color: $color9
+         span
+            color: $white
+            border-bottom-color: transparent
+      span
+         border-bottom: 1px solid rgba($color2, .5)
+         transition: .3s ease-in-out
+         
+   &_has-icon
+      width: 100%
+      padding: 16px 20px
+      font-size: 16px
+      box-shadow: 0 15px 30px rgba(28, 37, 55, 0.1)
+      background-color: $white
+      +xs
+         min-height: 60px
+         border-radius: 100px
+         line-height: 20px
+      &:hover
+         color: $color2
+         background-color: $white
+      &::before
+         display: none
+   &__icon
+      fill: $black
+      font-size: 26px
+      &-wrap
+         position: absolute
+         top: 0
+         left: 0
+         z-index: 1
+         +flexCenter
+         width: 60px
+         height: 60px
+         box-shadow: 0 15px 30px rgba(28, 37, 55, 0.1)
+         border-radius: 30px
+         background-color: $color9
+         +xs
+            top: calc(50% - 30px)
+      
+.link
+   position: relative
+   &::after
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      transition: .3s ease-in-out
+      content: ''
+   &_white
+      color: $white
+      &::after
+         border-bottom: 1px solid rgba($white, .5)
+   &_blue
+      color: $color2
+      &::after
+         border-bottom: 1px solid rgba($color2, .5)
+   &:hover
+      &::after
+         border-bottom-color: transparent
+ 
+.section-title
+   $parent: &
+   color: #f5f6f9
+   text-align: center
+   &__text
+      +f('pn700', 42, 28)
+      +xs
+         font-size: 32px
+         line-height: 32px
+      #{$parent}_black &
+         color: $color1
+      #{$parent}_lg &
+         margin-bottom: 5px
+         text-transform: uppercase
+         font-size: 56px
+         line-height: 62px
+         +sm
+            font-size: 36px
+            line-height: 42px
+   
+   &__descr
+      margin-top: 14px
+      font-size: 22px
+      line-height: 28px
+      +xs
+         font-size: 18px
+         line-height: 24px
+      #{$parent}_black &
+         color: $color11
+      #{$parent}_lg &
+         max-width: 540px
+         
+
+// *** begin contact-block *** //
+.contact-block
+   $parent: &
+   display: flex
+   align-items: center
+   color: #fff
+   &_sm
+      display: block
+   &_header
+      +sm
+         margin: 0 30px 0 auto
+      +xs
+         margin: 0 15px 0 auto
+   &__title
+      margin: 5px 25px 0 0
+      +f('pn400', 18, 22)
+      #{$parent}_sm &
+         font-size: 15px
+      #{$parent}_header &
+         +sm
+            display: none
+   &__socials
+      display: flex
+      align-items: center
+      margin-right: 20px
+      #{$parent}_sm &
+         margin-right: 0
+      #{$parent}_header &
+         +xs
+            display: none
+      &-link
+         +flexCenter
+         width: 40px
+         height: 40px
+         border-radius: 50%
+         overflow: hidden
+         #{$parent}_sm &
+            width: 21px
+            height: 21px
+         &:not(:last-child)
+            margin-right: 10px
+            #{$parent}_sm &
+               margin-right: 7px
+         &_whatsapp
+            background-color: #57bb63
+            transition: .3s ease-in-out
+            &:hover
+               background-color: darken(#57bb63, 7)
+         &_tg
+            background-color: #139bd0
+            transition: .3s ease-in-out
+            &:hover
+               background-color: darken(#139bd0, 7)
+      &-icon
+         font-size: 40px
+         fill: $white
+   &__tel
+      +f('pn700', 24, 24)
+      transition: .3s ease-in-out
+      &:hover
+         color: #ffba00
+      #{$parent}_sm &
+         margin-right: 7px
+         +f('pn400', 18)
+      #{$parent}_header &
+         +xs
+            font-size: 15px
+            line-height: 15px
+
+// end contact-block //
+
+// *** begin request-block *** //
+.request-block
+   position: relative
+   box-shadow: 0 15px 30px rgba(28, 37, 55, 0.1)
+   border-radius: 5px
+   background-color: $white
+   text-align: center
+   &__title
+      margin-bottom: 10px
+      font-size: 24px
+      line-height: 30px
+      +xs
+         font-size: 21px
+         line-height: 24px
+      span
+         +f('pn700')
+         color: $color2
+   &__form
+      &-row
+         display: flex
+         margin-bottom: 34px
+      &-field
+         flex: 0 1 50%
+         width: 50%
+         margin-right: 15px
+      &-btn
+         flex: 0 1 50%
+         width: 50%
+         +xs
+            flex: 1 1 auto
+            width: 100%
+      &-agreement
+         position: absolute
+         bottom: 0
+         left: 0
+         width: 100%
+         padding: 5px 30px
+         background-color: $color6
+         border-radius: 0 0 5px 5px
+         +xs
+            padding: 10px 30px 15px
+// end request-block //
+
+// *** begin socials *** //
+.socials
+   display: flex
+   align-items: center
+   a
+      display: flex
+      align-items: center
+      margin-left: 17px
+      &:hover
+         svg
+            fill: $color2
+      svg
+         fill: $color8
+         transition: .3s ease-in-out
+      .icon-vk
+         font-size: 25px
+      .icon-fb
+         font-size: 19px
+// end socials //
+
+// *** begin .checked-list *** //
+.checked-list
+   li
+      display: flex
+      align-items: flex-start
+      &:not(:last-child)
+         margin-bottom: 15px
+         +xs
+            margin-bottom: 10px
+      svg
+         margin-right: 12px
+         flex-shrink: 0
+         font-size: 26px
+      a
+         +f('pn700')
+         transition: .3s ease-in-out
+         white-space: nowrap
+         &:hover
+            color: $color2
+// end .checked-list //
+
+// *** begin call-block *** //
+.call-block
+   padding: 20px
+   background: $white
+   box-shadow: 0 15px 30px rgba(28,37,55,.1)
+   border-radius: 5px
+   text-align: center
+   &__title
+      margin-bottom: 20px
+      +f('pn700', 20, 24)
+   &__form
+      &-inner
+         margin-bottom: 25px
+      &-field
+         &:not(:last-child)
+            margin: 0 0 10px
+      &-btn
+         margin-bottom: 15px
+         width: 100%
+      &-agreement
+         max-width: 260px
+         margin: 0 auto
+         line-height: 18px
+// end call-block //

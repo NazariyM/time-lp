@@ -1,0 +1,54 @@
+.header
+   $parent: &
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
+   z-index: 100
+   pointer-events: none
+   &__logo
+      flex: 0 0 217px
+      +xs
+         flex: 0 0 102px
+   &__nav
+      position: relative
+      z-index: 1
+      pointer-events: auto
+   &__info
+      opacity: 1
+      transition: .35s ease-in-out
+      +sm
+         background-image: linear-gradient(to left, #2664f3 0%, #062b81 100%)
+      #{$parent}.is-fixed &
+         opacity: 0
+         transform: translateY(-100%)
+         +sm
+            opacity: 1
+            transform: none
+      &-container
+         display: flex
+         justify-content: space-between
+         padding: 20px 0 18px
+         max-width: 1140px
+         pointer-events: auto
+         +md
+            padding: 20px 15px 18px
+         +sm
+            z-index: 101
+            padding: 15px 15px 10px
+            box-shadow: 0 5px 10px rgba(#2664f3, .5)
+         &::after
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: 1
+            height: 1px
+            background-color: rgba($white, .15)
+            transition: .3s ease-in-out
+            content: ''
+            +md
+               left: 15px
+               right: 15px
+            +sm
+               display: none

@@ -1,0 +1,19 @@
+//begin footer
++b.FOOTER.footer
+	+e.container.container
+		+e.P.item © 2018 «Время поручений»
+
+		+b.socials.footer__socials.footer__item
+			+e.SPAN Мы в соц. сетях:
+			-
+				socList = [
+				['vk', 'https://vk.com/vremyaporucheniy'],
+				['inst', 'https://www.instagram.com/vremyaporucheniy/'],
+				['fb', 'https://www.facebook.com/vremyaporucheniy/']]
+			for socItem in socList
+				+e.A(href=`${socItem[1]}` target='_blank'): +i(`${socItem[0]}`)
+
+		+e.P.item Разработка сайта:
+			= ' '
+			+b.A.link._blue(href='https://admd.pro/lp2/?utm_campaign=porucheniya&amp;type=client_landing' target='_blank') ADMD
+//end footer

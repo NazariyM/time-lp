@@ -1,0 +1,23 @@
+.slider
+   display: none
+   &.slick-initialized
+      display: block
+      
+.slider-btn
+   position: absolute
+   z-index: 5
+   transition: .3s ease-in-out
+   &:hover
+      opacity: .5
+   &_prev
+      left: 0
+      svg
+         transform: scaleX(-1)
+   &_next
+      right: 0
+   svg
+      font-size: 26px
+      fill: #bdc0c8
+   &.slick-disabled
+      pointer-events: none
+      opacity: 0

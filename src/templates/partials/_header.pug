@@ -1,0 +1,33 @@
+//begin header
++b.HEADER.header(class= headerClass)
+	+b.nav.header__nav
+		+e.NAV.body
+			-
+				navList = [
+				['Что делаем', 'help'],
+				['Как работаем', 'work'],
+				['О нас', 'benefits'],
+				['Сотрудники', 'team'],
+				['Оплата и гарантии', 'advantages'],
+				['Отзывы', 'testimonials'],
+				['Контакты', 'contacts']
+				]
+			+e.UL.list
+				for navLink in navList
+					+e.LI.list-item: +e.A.list-link(href=`#${navLink[1]}`)= navLink[0]
+	+e.info
+		+e.info-container.container
+			+e.A.logo(href='#!')
+				+e.IMG(src='img/other/logo.svg' alt='Время поручений')
+
+			+b.contact-block._header
+				+e.P.title Принимаем заявки в мессенджерах и по телефону
+				+e.socials
+					+e.A.socials-link._whatsapp(href='https://wa.me/79057457333' target='_blank'): +i('whatsapp', 'contact-block__socials-icon')
+					+e.A.socials-link._tg(href='https://t.me/vremyaporucheniy' target='_blank'): +i('tg', 'contact-block__socials-icon')
+				+e.A.tel(href='tel:89057457333') 8 (905) 745-73-33
+
+			+b.BUTTON.nav-btn
+				+e.SPAN.burger
+					+e.SPAN.lines
+//end header

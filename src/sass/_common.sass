@@ -1,0 +1,83 @@
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('pn400', 18, 24)
+   color: $color1
+   +xs
+      font-size: 16px
+      line-height: 22px
+   
+   &.is-locked
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 0
+      overflow: hidden
+
+strong, b
+   +f('pn700')
+
+.container
+   position: relative
+   z-index: 1
+   max-width: 1170px
+   margin: 0 auto
+   padding: 0 15px
+   
+.row
+   display: flex
+   margin: 0 -15px
+   +xs
+      flex-direction: column
+   
+.col
+   margin: 0 15px
+   &_lg
+      flex: 0 1 calc(50% - 30px)
+      width: calc(50% - 30px)
+   &_sm
+      flex: 0 1 calc(25% - 30px)
+      width: calc(25% - 30px)
+      +md
+         flex: 0 1 calc(50% - 30px)
+         width: calc(50% - 30px)
+      +xs
+         flex: 0 1 auto
+         width: calc(100% - 30px)
+   
+.icon-rub
+   +f('rubl')
+   font-size: 28px
+   font-style: normal
+   color: #a2a9bb
+.icon-qiwi
+   flex: 0 0 65px
+   width: 65px
+   height: 28px
+
+.wrapper
+   height: 100vh
+   overflow-x: hidden
+   overflow-y: auto
+   perspective: 301px
+   .is-parallax-fallback &,
+   .is-ie &
+      height: auto
+      overflow-x: auto
+      overflow-y: auto
+      perspective: none
+
+section
+   position: relative
+   z-index: 2
+   background: $white
+   
+.section
+   position: relative
+   z-index: 2
+   padding: 80px 0 73px
+   background-color: $white
+   +xs
+      padding: 50px 0 40px

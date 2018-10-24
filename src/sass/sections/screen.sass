@@ -1,0 +1,91 @@
+.screen
+   padding-bottom: 30px
+   &__inner
+      padding: 105px 0 15px
+      background-image: linear-gradient(to left, #2664f3 0%, #062b81 100%)
+      +sm
+         padding: 105px 0 50px
+      +xs
+         padding: 115px 0 105px
+   &__container
+      display: flex
+      align-items: center
+      height: 710px
+      +sm
+         height: 600px
+      +xs
+         height: auto
+   &__content
+      flex: 0 1 percentage(653 / 1140)
+      +sm
+         flex: 0 1 65%
+      +xs
+         flex: 0 1 auto
+         width: 100%
+   &__img
+      flex: 0 1 percentage(468 / 1140)
+      width: percentage(468 / 1140)
+      margin-left: 30px
+      +xs
+         display: none
+      &-part
+         opacity: 0
+   &__title
+      margin-bottom: 30px
+      text-align: left
+      opacity: 0
+      +disableAnim
+   &__about
+      display: flex
+      max-width: 630px
+      +xs
+         flex-direction: column
+      &-item
+         $parent: &
+         flex: 0 1 33.33333%
+         width: 33.33333%
+         padding-right: 15px
+         color: $white
+         opacity: 0
+         transform: translateX(-50px)
+         +disableAnim
+         +xs
+            flex: 0 1 auto
+            width: 100%
+            padding-right: 0
+         &:not(:last-child)
+            +xs
+               margin-bottom: 20px
+         &-icon-wrap
+            height: 60px
+            margin-bottom: 5px
+            +xs
+               padding-left: 15px
+            #{$parent}:nth-child(3) &
+               +xs
+                  padding-left: 21px
+            svg
+               fill: $color2
+            .icon-handshake
+               font-size: 57px
+            .icon-jigsaw
+               font-size: 56px
+            .icon-contract
+               font-size: 54px
+         p
+            +f('pn700')
+            br
+               +xs
+                  display: none
+   &__request-block
+      position: relative
+      z-index: 1
+      max-width: 800px
+      margin: -70px auto 0
+      padding: 23px 56px
+      +sm
+         max-width: 722px
+         padding: 23px 30px
+      +xs
+         padding: 23px 30px 60px
+         margin: -70px 15px 0

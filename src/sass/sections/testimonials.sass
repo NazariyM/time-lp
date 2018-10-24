@@ -1,0 +1,80 @@
+.testimonials
+   padding: 40px 0 73px
+   &__title
+      margin-bottom: 52px
+      +xs
+         margin-bottom: 30px
+   &__slider
+      +md
+         padding: 0 15px
+      +sm
+         max-width: 738px
+         margin: 0 auto
+      .slick-list
+         margin: 0 -15px
+      .slider-btn
+         top: calc(50% - 40px)
+         +xs
+            top: 45px
+         &_prev
+            left: -50px
+            +md
+               left: -15px
+            +xs
+               left: 0
+         &_next
+            right: -50px
+            +md
+               right: -5px
+            +xs
+               right: 0
+   &__person
+      $parent: &
+      padding: 0 15px
+      &-inner
+         display: flex
+         +xs
+            flex-direction: column
+      &-text
+         position: relative
+         flex: 1
+         padding: 15px 0 20px 34px
+         +md
+            padding: 15px 0 20px 20px
+         +xs
+            padding: 0 0 20px
+      &-data
+         flex: 0 0 135px
+         text-align: center
+         +xs
+            margin-bottom: 20px
+      &-photo
+         margin-bottom: 10px
+         overflow: hidden
+         width: 135px
+         height: 135px
+         border-radius: 50%
+         +cover-img
+         +xs
+            margin: 0 auto 10px
+         &_top img
+            object-position: top
+            
+      &-name
+         +f('pn700', 18, 22)
+      &-city
+         font-size: 16px
+      &-pos
+         margin-bottom: 13px
+         +f('pn700', 22, 24)
+      &-speech
+         position: relative
+         max-height: 160px
+         padding-left: 26px
+         +f('pn400i', 16, 24)
+         i
+            position: absolute
+            top: 15px
+            left: -6px
+            font-size: 60px
+            color: $color2

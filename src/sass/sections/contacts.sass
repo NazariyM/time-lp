@@ -1,0 +1,113 @@
+// *** begin contacts *** //
+.contacts
+   background-image: linear-gradient(to left, #2664f3 0%, #062b81 100%)
+   &__container
+      display: flex
+      +sm
+         flex-direction: column
+         padding: 0 40px
+      +xs
+         padding: 0 15px
+   &__block
+      flex: 0 1 percentage(540 / 1140)
+      width: percentage(540 / 1140)
+      padding-right: 30px
+      border-right: 1px solid rgba($white, .15)
+      +sm
+         flex: 1 1 auto
+         width: 100%
+         margin-bottom: 70px
+         padding-right: 0
+         border-right: 0
+      +xs
+         margin-bottom: 50px
+   &__title
+      margin-bottom: 40px
+      text-align: left
+      +sm
+         text-align: center
+   &__item
+      display: flex
+      align-items: center
+      &:not(:last-child)
+         margin-bottom: 20px
+      &-icon-wrap
+         +flexCenter
+         flex-shrink: 0
+         width: 70px
+         height: 70px
+         margin-right: 15px
+         border-radius: 50%
+         background-color: $color2
+         svg
+            fill: $white
+         .icon-phone-call
+            font-size: 34px
+         .icon-envelope
+            font-size: 35px
+         .icon-clock
+            font-size: 38px
+         .icon-placeholder
+            font-size: 35px
+      &-title
+         color: #a3a9b7
+         text-transform: uppercase
+         font-size: 14px
+      &-descr
+         color: $white
+         font-style: normal
+   &__ask
+      flex: 0 1 percentage(585 / 1140)
+      width: percentage(585 / 1140)
+      padding-left: 44px
+      +md
+         padding-left: 30px
+      +sm
+         flex: 1 1 auto
+         width: 100%
+         padding-left: 0
+      
+// end contacts //
+
+// *** begin ask *** //
+.ask
+   &__title
+      text-align: left
+      margin-bottom: 30px
+      +sm
+         text-align: center
+   &__form
+      &-row
+         display: flex
+         margin-bottom: 15px
+         +xs
+            flex-direction: column
+      &-field
+         flex: 1 1 50%
+         width: 50%
+         &_message
+            flex: 1
+            width: 100%
+            margin-bottom: 30px
+      &-actions
+         display: flex
+         align-items: center
+         max-width: 482px
+         +sm
+            margin: 0 auto
+         +xs
+            margin: 20px auto 0
+            flex-direction: column
+      &-btn
+         margin-right: 20px
+         +xs
+            margin-right: 0
+            margin-bottom: 5px
+      &-agreement
+         margin-top: 5px
+         text-align: left
+         line-height: 20px
+         +xs
+            text-align: center
+      
+// end ask //

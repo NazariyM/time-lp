@@ -1,0 +1,77 @@
+.help
+   padding: 50px 0 73px
+   background: $white
+   &__title
+      margin-bottom: 100px
+      +xs
+         margin-bottom: 80px
+   &__row
+      margin-bottom: 24px
+      +md
+         flex-wrap: wrap
+         margin: 0 0 25px
+      +xs
+         margin: 0 -15px 25px
+   
+   &__item
+      $parent: &
+      display: flex
+      flex-direction: column
+      padding: 0 15px 30px
+      box-shadow: 0 15px 30px rgba(28, 37, 55, 0.1)
+      border-radius: 5px
+      background: $white
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 90px
+      &:nth-child(2) ~ &
+         +md
+            margin-top: 90px
+      &-icon-wrap
+         +flexCenter
+         width: 90px
+         height: 90px
+         margin: -50px auto 27px
+         border-radius: 50%
+         background-color: $color2
+         svg
+            fill: $white
+            font-size: 48px
+      &-title
+         margin-bottom: 20px
+         text-align: center
+         +f('pn700', 18, 22)
+      &-list
+         margin-bottom: 22px
+         padding: 0 6px
+         #{$parent}:nth-child(1) &
+            padding: 0
+            margin-right: -5px
+         #{$parent}:nth-child(2) &
+            padding: 0
+         #{$parent}:nth-child(3) &
+            padding-right: 0
+         &-text
+            font-size: 16px
+            line-height: 20px
+            &:not(:last-child)
+               margin-bottom: 10px
+            &::before
+               display: inline
+               margin-right: 5px
+               color: $color2
+               content: '•'
+         br
+            +xs
+               display: none
+      &-descr
+         margin: auto 0 23px
+         text-align: center
+         +f('pn700', 16, 18)
+         
+   &__descr
+      max-width: 600px
+      margin: 0 auto
+      text-align: center
+      color: #63676f
+      +f('pn400i')

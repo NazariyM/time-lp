@@ -1,0 +1,79 @@
+.benefits
+   padding: 80px 0 88px
+   &__title
+      margin-bottom: 27px
+   &__descr
+      position: relative
+      max-width: 940px
+      margin: 0 auto 80px
+      padding-top: 27px
+      line-height: 26px
+      text-align: center
+      color: #f5f6f9
+      +xs
+         line-height: 24px
+   
+      &::before
+         position: absolute
+         top: 0
+         left: calc(50% - 40px)
+         width: 80px
+         height: 2px
+         background-color: $color2
+         content: ''
+   &__row
+      +sm
+         flex-wrap: wrap
+         justify-content: center
+         margin: 0 60px
+      +xs
+         margin: 0 -15px
+         align-items: center
+   &__item
+      padding: 0 15px 20px
+      border: 2px solid rgba($white, .15)
+      border-radius: 5px
+      color: $white
+      text-align: center
+      +xs
+         max-width: 262px
+      &:nth-child(1)
+         padding: 0 8px 20px
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 60px
+      &:nth-child(2) ~ &
+         +sm
+            margin-top: 60px
+   
+      &-icon-wrap
+         +flexCenter
+         width: 90px
+         height: 90px
+         margin: -44px auto 30px
+         border-radius: 50%
+         border: 2px solid rgba($white, .15)
+         box-shadow: 0 15px 30px rgba(28, 37, 55, 0.1)
+         background-color: $color10
+         +xs
+            margin: -44px auto 20px
+         svg
+            font-size: 52px
+         .icon-laptop
+            fill: #df7383
+         .icon-network
+            position: relative
+            top: -4px
+            fill: #6cb5fb
+         .icon-list
+            fill: #ec9457
+         .icon-quality
+            fill: #8bdeff
+      &-title
+         margin-bottom: 7px
+         +f('pn700', 20, 22)
+      &-descr
+         font-size: 16px
+         line-height: 24px
+         a
+            +f('pn700')

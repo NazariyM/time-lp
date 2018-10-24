@@ -1,0 +1,165 @@
+.popup
+   $parent: &
+   position: fixed
+   top: 0
+   right: 0
+   bottom: 0
+   left: 0
+   opacity: 0
+   visibility: hidden
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+   z-index: 1300
+   overflow: auto
+   outline: 0
+   text-align: center
+   font-size: 0
+   transform: translate3d(0, 0, 0)
+   transition: .3s ease-in-out
+   will-change: opacity, transform
+   background-image: linear-gradient(to left, #2664f3 0%, #062b81 100%)
+   &:after
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 0
+      height: 100%
+   &.opened
+      opacity: 1
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+      visibility: visible
+   &_thanks
+      &::before
+         content: ''
+         +coverdiv
+         background: url("../img/bg/thanks-pop_bg.png")
+         background-repeat: no-repeat
+         background-position: 50% 50%
+         background-size: contain
+         +sm
+            display: none
+   &__close
+      position: absolute
+      top: -30px
+      right: -25px
+      z-index: 10
+      cursor: pointer
+      padding: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 28px
+      height: 28px
+      border: 1px solid $white
+      border-radius: 50%
+      transition: .3s ease-in-out
+      +xs
+         top: -40px
+         right: 15px
+      &:hover
+         border-color: #ffba00
+         svg
+            fill: #ffba00
+            transform: rotate(90deg)
+      svg
+         fill: $white
+         font-size: 12px
+         transition: .3s ease-in-out
+   
+   &__container
+      position: relative
+      display: inline-block
+      vertical-align: middle
+      max-width: 1170px
+      width: 100%
+      padding: 0 15px
+      margin: 30px auto
+      transition: opacity .5s ease, transform .5s ease
+      transform: translate3d(0, -100px, 0)
+      will-change: transform, opacity
+      text-align: left
+      border-radius: 5px
+      +mob-fix
+      #{$parent}_xs &
+         max-width: 360px
+      #{$parent}_lg &
+         margin: 50px auto
+         max-width: 930px
+   &__close-link
+      position: absolute!important
+      bottom: 30px
+      left: 50%
+      transform: translateX(-50%)
+      font-size: 12px
+      text-transform: uppercase
+      color: #fbfcff
+         
+body.popup-opened
+   overflow: hidden
+
+.popup.opened .popup__container
+   -webkit-transform: translate3d(0, 0, 0)
+   -moz-transform: translate3d(0, 0, 0)
+   transform: translate3d(0, 0, 0)
+  
+// *** begin thanks-popup *** //
+.thanks-popup
+   text-align: center
+   color: $white
+   &__title
+      margin-bottom: 30px
+      +f('pn700', 56, 62)
+      text-transform: uppercase
+      +sm
+         margin-bottom: 20px
+         font-size: 38px
+         line-height: 40px
+      +xs
+         font-size: 28px
+         line-height: 36px
+   &__btn
+      display: none
+   p
+      font-size: 18px
+      line-height: 24px
+      text-align: center
+      +xs
+         font-size: 16px
+// end thanks-popup //
+
+// *** begin agree-popup *** //
+.agree-popup
+   padding: 30px
+   background: $white
+   box-shadow: 0 15px 30px rgba(28,37,55,.1)
+   border-radius: 5px
+   +xs
+      padding: 25px 20px
+   &__descr
+      margin-bottom: 20px
+      font-size: 18px
+      text-indent: 25px
+      +f('pn400i')
+      +xs
+         font-size: 16px
+   &__list
+      margin-bottom: 30px
+      padding-left: 15px
+      font-size: 18px
+      +xs
+         font-size: 16px
+      li
+         &:not(:last-child)
+            margin-bottom: 5px
+         > ul
+            padding-top: 5px
+            padding-left: 15px
+      &-title
+         margin-bottom: 10px
+         +f('pn700', 18, 24)
+      &-circled
+         padding-left: 30px!important
+         list-style: disc
+   a
+      color: $color2
+      
+// end agree-popup //

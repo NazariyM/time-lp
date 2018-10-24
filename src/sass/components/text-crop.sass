@@ -1,0 +1,14 @@
+.text-crop
+   $parent: &
+   &__expand-btn
+      position: absolute
+      right: 0
+      bottom: 0
+      z-index: 1
+      +f('pn400i', 12, 12)
+      transition: .3s ease-in-out
+      &:hover
+         color: $color2
+   &__el
+      #{$parent}.is-active &
+         max-height: 600px

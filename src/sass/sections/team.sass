@@ -1,0 +1,67 @@
+.team
+   padding: 80px 0 40px
+   &__title
+      margin-bottom: 40px
+   &__slider
+      +gpu
+      +md
+         padding: 0 30px
+      +sm
+         max-width: 738px
+         margin: 0 auto
+      +xs
+         max-width: 360px
+         padding: 0
+      .slick-list
+         margin: 0 -30px
+         padding: 0 5px 40px
+         +xs
+            padding: 0 0 40px
+            margin: 0 -15px
+      .slider-btn
+         top: calc(50% - 82px)
+         z-index: 2
+         &_prev
+            left: -54px
+            +md
+               left: -5px
+         &_next
+            right: -54px
+            +md
+               right: -5px
+   &__person
+      position: relative
+      margin: 0 15px
+      &-data
+         position: absolute
+         bottom: 0
+         left: 0
+         width: 100%
+         z-index: 3
+         padding: 24px 13px 20px
+         background-color: $white
+         box-shadow: 0 15px 25px rgba(28, 37, 55, 0.1)
+         border-radius: 5px
+         text-align: center
+         color: $color7
+      &-photo
+         position: relative
+         z-index: -1
+         height: 375px
+         overflow: hidden
+         img
+            margin: 0 auto
+            max-height: 373px
+            +gpu
+         &_img-height
+            img
+               height: auto
+      &-name
+         //margin-bottom: 16px
+         +f('pn700', 22, 24)
+         span
+            display: block
+      &-descr
+         display: none
+         //font-size: 16px
+         //line-height: 22px
