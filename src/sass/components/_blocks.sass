@@ -95,6 +95,27 @@
    &:hover
       &::after
          border-bottom-color: transparent
+   &_has-icon
+      display: flex
+      align-items: center
+      &:hover span::after
+         border-bottom-color: transparent
+      &::after
+         display: none
+      span
+         position: relative
+         &::after
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            transition: .3s ease-in-out
+            border-bottom: 1px solid rgba($color2, .5)
+            content: ''
+      svg
+         margin-right: 8px
+         font-size: 26px
+         fill: #4a80fc
  
 .section-title
    $parent: &
@@ -294,6 +315,9 @@
    &__title
       margin-bottom: 20px
       +f('pn700', 20, 24)
+      +r(374)
+         font-size: 17px
+         line-height: 20px
    &__form
       &-inner
          margin-bottom: 25px

@@ -5,12 +5,13 @@
    &__slider
       +gpu
       +md
+         max-width: 900px
+         margin: 0 auto
          padding: 0 30px
       +sm
-         max-width: 738px
-         margin: 0 auto
+         max-width: 620px
       +xs
-         max-width: 360px
+         max-width: 268px
          padding: 0
       .slick-list
          margin: 0 -30px
@@ -24,19 +25,19 @@
          &_prev
             left: -54px
             +md
-               left: -5px
+               left: -35px
+            +r(374)
+               left: -15px
          &_next
             right: -54px
             +md
-               right: -5px
+               right: -35px
+            +r(374)
+               right: -15px
    &__person
       position: relative
       margin: 0 15px
       &-data
-         position: absolute
-         bottom: 0
-         left: 0
-         width: 100%
          z-index: 3
          padding: 24px 13px 20px
          background-color: $white
@@ -46,16 +47,14 @@
          color: $color7
       &-photo
          position: relative
-         z-index: -1
          height: 375px
          overflow: hidden
+         display: flex
+         align-items: flex-end
+         +cover-img
          img
-            margin: 0 auto
-            max-height: 373px
             +gpu
-         &_img-height
-            img
-               height: auto
+            margin: 0 auto
       &-name
          //margin-bottom: 16px
          +f('pn700', 22, 24)

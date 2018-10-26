@@ -15,9 +15,11 @@ mixin popup(el)
 				+e.container
 					+e.close.js-popup-close: +i('cancel')
 					+b.call-block
-						+e.H4.title Оставьте свои контакты
+						+e.H4.title Оставьте контактные данные,
 							br
-							| и наш менеджер свяжется через 10 минут
+							| и наш менеджер свяжется
+							br
+							| с вами в течение 10 минут
 						+e.FORM.form.js-form(action='#!' method='POST')
 							+e.form-inner
 								+formField('call-block__form-field', 'Введите имя', 'profile')
