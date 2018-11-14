@@ -27,7 +27,7 @@ mixin popup(el)
 							+btn('call-block__form-btn', 'Отправить')(type='submit')
 							+b.P.form-agreement.call-block__form-agreement Нажимая кнопку, вы принимаете
 								= ' '
-								+e.A.link(href='#!' data-popup-target='agree-popup') Положение и Согласие на обработку персональных данных
+								+e.A.link(href='data/services-agreement.pdf' target='_blank') Положение и Согласие на обработку персональных данных
 
 		when 'agree-popup'
 			+b.popup._lg(data-popup-id='agree-popup', tabindex='-1', role='dialog')

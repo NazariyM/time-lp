@@ -38,7 +38,7 @@
       &-text
          position: relative
          flex: 1
-         padding: 15px 0 20px 34px
+         padding: 15px 0 25px 34px
          +md
             padding: 15px 0 20px 20px
          +xs
@@ -71,10 +71,18 @@
          position: relative
          max-height: 160px
          padding-left: 26px
+         padding-right: 15px
          +f('pn400i', 16, 24)
          i
             position: absolute
-            top: 15px
-            left: -6px
             font-size: 60px
             color: $color2
+            &:nth-child(1)
+               top: 15px
+               left: -10px
+            &:nth-child(2)
+               bottom: 17px
+               right: -20px
+               transform: rotate(180deg)
+               +md
+                  right: -15px

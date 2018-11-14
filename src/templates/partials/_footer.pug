@@ -13,17 +13,14 @@
 			for socItem in socList
 				+e.A(href=`${socItem[1]}` target='_blank'): +i(`${socItem[0]}`)
 
-		+e.P.item Разработка сайта:
-			= ' '
-			+b.A.link._blue(href='https://admd.pro/lp2/?utm_campaign=porucheniya&amp;type=client_landing' target='_blank') ADMD
 	+e.container.container
-		+e.A.link.link._blue._has-icon(href='#!' target='_blank')
+		+e.A.link.link._blue._has-icon(href='data/offer-agreement.pdf' target='_blank')
 			+i('pdf-logo')
 			span Договор-оферты
-		+e.A.link.link._blue._has-icon(href='#!' target='_blank')
+		+e.A.link.link._blue._has-icon(href='data/confidentiality-policy.pdf' target='_blank')
 			+i('pdf-logo')
 			span Политика конфиденциальности
-		+e.A.link.link._blue._has-icon(href='#!' target='_blank')
+		+e.A.link.link._blue._has-icon(href='data/services-agreement.pdf' target='_blank')
 			+i('pdf-logo')
 			span Договор для юр. лиц
 

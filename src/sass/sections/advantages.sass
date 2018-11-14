@@ -14,7 +14,7 @@
          flex: 1 1 auto
          width: calc(100% - 30px)
       +xs
-         padding: 30px 20px 8px
+         padding: 30px 20px
       &:not(:first-child)
          +sm
             margin-top: 30px
@@ -79,7 +79,7 @@
                   margin: 0 0 10px
             &:last-child
                +xs
-                  margin-top: -15px
+                  margin: -15px 0
                +r(374)
                   margin-top: 0
                   flex-wrap: wrap
@@ -120,8 +120,11 @@
          +xs
             font-size: 15px
             line-height: 15px
-   
+            width: 100%
+            justify-content: center
+            white-space: nowrap
+         +r(374)
+            font-size: 14px
          svg
-            margin-right: 10px
-            font-size: 32px
-            fill: $color2
+            +r(374)
+               font-size: 22px
